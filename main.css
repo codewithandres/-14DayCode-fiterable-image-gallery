@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Rubik", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+
+    height: 100vh;
+    background: #141E30;
+    background: linear-gradient(to right, #243B55, #141E30);
+
+}
+
+h1 {
+    text-align: center;
+    font-size: 4em;
+    margin-top: 1rem;
+    font-family: "Protest Revolution", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    color: #fff;
+
+    span {
+        color: hsl(59, 100%, 50%);
+    }
+}
+
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Protest Revolution", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.filter-button {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+}
+
+.button--galeria {
+    padding: 8px 25px;
+    font-size: .9em;
+    background-color: #fff;
+    border: none;
+    border-radius: .5em;
+    box-shadow: 0 0 3px rgba(0 0 0 / 15%);
+    cursor: pointer;
+    font-weight: 400;
+    font-family: inherit;
+    transition: 0.3s ease;
+}
+
+.button--galeria:hover {
+    background-color: hsla(212, 100%, 11%, 0.336);
+    color: #fff;
+}
+
+.button--galeria.active {
+    background-color: hsl(212, 100%, 11%);
+    color: #ffff;
+}
+
+.filterable-cards {
+    margin-top: 1.5em;
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: #141E30;
+    /* padding: 3px; */
+    border-radius: .5em;
+    flex-grow: 1;
+    flex-basis: 300px;
+    box-shadow: 0 0 10px rgba(0 0 0 / 15%);
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: .5em .5em 0 0;
+}
+
+@keyframes fade {
+    to {
+        opacity: 0;
+        transform: scale(.8);
+        display: none;
+    }
+}
+
+.card.hidden {
+    animation: fade 0.3s forwards;
+}
+
+.card--body {
+    padding: 15px 20px 20px;
+    color: #fff;
+}
+
+.card[data-name="gallery2"] .card--tittle {
+    color: hsl(59, 100%, 50%);
+    background-color: hsla(51, 100%, 50%, 0.274);
+}
+
+.card[data-name="gallery3"] .card--tittle {
+    color: hsl(0, 100%, 50%);
+    background-color: hsla(0, 100%, 50%, 0.274);
+}
+
+.card[data-name="gallery4"] .card--tittle {
+    color: hsl(212, 100%, 50%);
+    background-color: hsla(212, 100%, 50%, 0.274);
+}
+
+.card--body .card--tittle {
+    font-size: 1em;
+    text-wrap: pretty;
+    margin-bottom: .5em;
+    font-weight: 400;
+    color: hsl(125, 100%, 51%);
+    background-color: hsla(125, 100%, 50%, 0.274);
+    width: fit-content;
+    border-radius: .6em;
+    padding: .2em 1.3em;
+    letter-spacing: 0.5px;
+
+}
+
+.card--body p {
+    font-size: 16px;
+    font-weight: 300;
+    text-wrap: pretty;
+}
